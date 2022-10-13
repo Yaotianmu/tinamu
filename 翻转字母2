@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<assert.h>
+#include<string.h>
+void reverse(char* arr)
+{
+	assert(arr != NULL);
+	int len = strlen(arr);
+	char *start = arr;
+	char *end = arr + len - 1;
+	while (start < end)
+	{
+		char a = *start;
+		*start = *end;
+		*end = a;
+		start++;
+		end--;
+	}
+}
+int main()
+{
+	char arr[] = "abcdef";
+	reverse(arr);
+	printf("%s", arr);
+	
+	return 0;
+} 
+ 
